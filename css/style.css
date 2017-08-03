@@ -1,0 +1,570 @@
+.cezaTablo {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    overflow: hidden;
+}
+.cezaTablo tr:first-child th {
+    background: #a7633b;
+    padding: 12px 10px;
+    margin-top: 15px;
+    color: #cfcac6;
+    font-weight: 600;
+}
+.cezaTablo tr td {
+    text-align: center;
+    padding: 8px 10px
+}
+.cezaTablo tr td {
+    font-size: 12px;
+    background: #DEDAD8
+}
+.cezaTablo tr td:nth-child(1) {
+    width: 18%;
+}
+.cezaTablo tr td:nth-child(1) .fa-microphone-slash:nth-child(1),
+.cezaTablo tr td:nth-child(1) .fa-commenting:nth-child(1) {
+    position: absolute;
+    left: 10px;
+    background: #7994b1;
+    border-radius: 4px;
+    width: 17px;
+    height: 17px;
+    line-height: 17px;
+    text-indent: 1px;
+    color: #dedad8;
+}
+.cezaTablo tr td:nth-child(1) .fa-microphone-slash {
+    background: #7f79b1 !important;
+    line-height: 18px !important;
+}
+.cezaTablo tr td:nth-child(2) {
+    width: 20%;
+    text-align: left;
+    font-weight: 500
+}
+.cezaTablo tr td:nth-child(2) {
+    color: #5d5751;
+}
+.cezaTablo tr td:nth-child(3) {
+    width: 17.5%;
+    text-align: left;
+}
+.cezaTablo tr td:nth-child(3) i,
+.acilirpanel div table i {
+    margin-right: 5px;
+    padding: 3px;
+    border-radius: 4px;
+    width: 11px;
+    height: 11px;
+    font-size: 10px;
+    text-align: center;
+    color: #f5f5f5;
+}
+.cezaTablo tr td:nth-child(3) i.sunucuSahibi,
+.acilirpanel div i.sunucuSahibi {
+    background: #A44330;
+    letter-spacing: -1px
+}
+.cezaTablo tr td:nth-child(3) i.yonetici,
+.acilirpanel div i.yonetici {
+    background: #C7912E;
+}
+.cezaTablo tr td:nth-child(3) i.admin,
+.acilirpanel div i.admin {
+    background: #4C9F46;
+}
+.acilirpanel div i.yonetici {
+    padding-right: 4px
+}
+.acilirpanel div i.admin {
+    padding-right: 5px;
+}
+.cezaTablo tr td:nth-child(3) i.console,
+.acilirpanel div i.console,
+.silinmis {
+    background: #6d8dbd;
+    letter-spacing: -1px
+}
+.cezaTablo tr td:nth-child(3) .silinmis {
+    padding-top: 4px
+}
+.cezaTablo tr td:nth-child(3) span.sunucuSahibi {
+    color: Red
+}
+.cezaTablo tr td:nth-child(4) {
+    width: 27%;
+    text-align: left;
+}
+.cezaTablo tr td:nth-child(5) {
+    width: 17.5%;
+}
+.cezaTablo tr td:nth-child(5) span {
+    padding: 8px 14px;
+    border-radius: 4px;
+    color: #f5f5f5;
+    font-weight: 600;
+    font-size: 11px;
+    display: block;
+    margin: 0 auto
+}
+.cezaTablo tr td:nth-child(5).kalici span {
+    background: #d46262
+}
+.cezaTablo tr td:nth-child(5).doldu span {
+    background: #7bb37d
+}
+.cezaTablo tr td:nth-child(5).kaldirildi span {
+    background: #749a75
+}
+.cezaTablo tr td:nth-child(5).bandevam span {
+    background: #caa95f
+}
+.cezaTablo tr td:nth-child(5) i {
+    position: relative;
+    top: 1px;
+    margin-right: 5px
+}
+.cezaTablo tr td:nth-child(5) i.fa-times,
+.cezaTablo tr td:nth-child(5) i.icon-check {
+    top: 0
+}
+.cezaTablo tr.detaylibilgi:hover td {
+    background: #dcd8d6;
+}
+.cezaTablo tr:hover td {
+    cursor: pointer;
+}
+.cezaTablo tr:hover td table td {
+    cursor: default;
+    ;
+}
+.acilirpanel {
+    cursor: default;
+}
+.acilirpanel td {
+    padding: 0 !important;
+    cursor: default;
+}
+.cezaTablo .detaylibilgi td {
+    background: #dad6d4
+}
+.acilirpanel div {
+    display: none;
+    color: #5d5751;
+    padding: 10px;
+    background: #dad6d4;
+    position: relative;
+}
+.acilirpanel div table {
+    width: 30%;
+    border-collapse: collapse;
+    margin: 0 20px;
+    display: inline-table;
+}
+.acilirpanel div table tr td {
+    background: none;
+    text-align: left;
+    padding: 10px !important
+}
+.acilirpanel div table tr td:nth-child(1) {
+    width: 12%
+}
+.acilirpanel div table tr td .flag-icon {
+    border-radius: 4px;
+    margin-right: 5px;
+    position: relative;
+    top: 1px
+}
+.acilirpanel tr:first-child th {
+    background: #5d5751;
+    color: #dad6d4;
+    border-radius: 4px;
+    padding: 10px;
+}
+.acilirpanel tr td:nth-child(2) {
+    text-align: right
+}
+.acilirpanel .detaybilgilink {
+    background: #637fa9;
+    padding: 5px;
+    border-radius: 4px;
+    color: #f1f0f3;
+    vertical-align: middle;
+    opacity: 0.9
+}
+.acilirpanel .detaybilgilink i {
+    margin-right: 5px
+}
+.acilirpanel .detaybilgilink:hover {
+    opacity: 1
+}
+.detaybilgilinksteamrep {
+    background: #c34343 !important
+}
+.acilirpanel table tr td i.fa-ban,
+.acilirpanel table tr td i.fa-circle-o-notch,
+.acilirpanel table tr td i.fa-clock-o,
+.acilirpanel table tr td i.fa-undo {
+    color: inherit;
+}
+.acilirpanel ul.yetkiliIsta {
+    left: 0 !important;
+    right: auto !important;
+}
+.acilirpanel ul.yetkiliIsta li {
+    padding: 0;
+    display: inline-block;
+    min-width: inherit;
+    width: 65%;
+    margin: 0 2% 4% 2%;
+}
+.acilirpanel ul.yetkiliAraclari,
+.acilirpanel ul.yetkiliIsta {
+    position: absolute;
+    right: 0;
+    top: 10px;
+    margin: 10px 0;
+    width: 185px
+}
+.acilirpanel ul.yetkiliIsta li a.aratsteam {
+    background: #6f88ae;
+}
+.acilirpanel ul.yetkiliIsta li a.aratisim {
+    background: #ad795a;
+}
+.acilirpanel ul.yetkiliIsta li a.aratip {
+    background: #b36b6b;
+}
+.acilirpanel ul h1 {
+    color: #9a8f8c;
+    font-size: 11px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2px 10px 10px 10px;
+    border-bottom: 1px solid #cac4c2;
+    width: 75%;
+    margin: 0 auto 15px auto
+}
+.acilirpanel ul li {
+    padding: 0;
+    display: inline-block;
+    min-width: 45%;
+}
+.acilirpanel ul li a {
+    background: #b7b0ad;
+    text-align: left;
+    overflow: hidden;
+    font-size: 10px;
+    font-weight: 600;
+    color: #f5f5f5;
+    padding: 7.5px;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    opacity: 0.9
+}
+.acilirpanel ul li a i {
+    margin-right: 0;
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 11px;
+    margin: -9.5px 5px -7.5px -7.5px;
+    height: 26px;
+    width: 22px;
+    vertical-align: middle;
+    line-height: 26px;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px
+}
+.acilirpanel ul li a:hover {
+    opacity: 1.0;
+}
+.acilirpanel ul li a.duzenle {
+    background: #7e95b3
+}
+.acilirpanel ul li a.mute {
+    background: #b77272;
+}
+.acilirpanel ul li a.gag {
+    background: #ba907c;
+}
+.acilirpanel ul li a.undo {
+    background: #749a75;
+}
+.acilirpanel ul li a.sil {
+    background: #796b6b;
+}
+.acilirpanel ul.yetkiliAraclari+ul {
+    top: 103px
+}
+.acilirpanel ul.yetkiliAraclari+ul li {
+    padding: 0;
+    display: inline-block;
+    min-width: inherit;
+    width: 40%;
+    margin: 0 2% 4% 2%;
+}
+.acilirpanel ul.yetkiliAraclari+ul li a,
+.acilirpanel ul.yetkiliIsta li a {
+    display: list-item
+}
+.cezaSayfalama {
+    width: 100%;
+    margin: 15px auto 0px auto;
+    text-align: center;
+    vertical-align: middle;
+}
+.cezaSayfalama a,
+.cezaSayfalama span {
+    display: inline-block;
+    font-size: 20px;
+    border-radius: 100%;
+    background: #898179;
+    padding: 5px;
+    width: 20px;
+    color: #fafafa;
+}
+.cezaSayfalama a i,
+.cezaSayfalama span i {
+    vertical-align: middle;
+}
+.cezaSayfalama a:hover {
+    background: #a2582c;
+    color: #fafafa;
+}
+.cezaSayfalama select {
+    margin: 0 35px;
+    border-radius: 4px;
+    border: 2px solid #9c9996;
+    padding: 7px;
+    background: #dedad8;
+    outline: none;
+    transition: .2s;
+}
+.cezaSayfalama select:focus {
+    border-color: #a7633b;
+    background: #fafafa
+}
+.cezaSayfalama .fa-angle-left {
+    letter-spacing: 2px
+}
+.cezaSayfalama .fa-angle-right {
+    letter-spacing: -2px
+}
+.cezaSayfalama .delink {
+    background: #ACA59F;
+    color: #E4E1DE;
+}
+.cezaSayfalama .linksayi {
+    font-size: 9px;
+    color: #dedad8;
+    opacity: 0.8;
+    font-weight: 600;
+    margin-right: 10px;
+    width: 17px;
+    height: 17px;
+    line-height: 17px;
+    position: relative;
+    top: -1px
+}
+.cezaSayfalama .linksayisag {
+    margin-right: 0;
+    margin-left: 10px;
+}
+.cezaSayfalama .solbas {
+    position: relative;
+    top: -3px
+}
+.cezaSayfalama .solbas i {
+    line-height: 16px
+}
+.nav2govde {
+    height: 0;
+    float: right;
+    width: 300px
+}
+navigation.nav2 {
+    position: relative;
+    right: 0;
+    top: -59px;
+}
+navigation.nav2 .breadcrumb {
+    background: none
+}
+navigation.nav2 .breadcrumb .crust {
+    float: right
+}
+navigation.nav2 .crumb {
+    margin-left: 22px;
+}
+navigation.nav2 .breadcrumb .crust .arrow span {
+    border: 23px solid transparent;
+    border-left: 1px none black;
+    border-right-color: #a09992;
+    display: block;
+    position: absolute;
+    left: -23px;
+    top: -23px;
+    z-index: 51;
+    white-space: nowrap;
+    overflow: hidden;
+    text-indent: 9999px;
+    width: 0px;
+    height: 0px;
+    transition: all 0.5s ease;
+}
+navigation.nav2 .breadcrumb .crust .arrow {
+    left: 0;
+}
+navigation.nav2 .crust:hover .arrow span {
+    border-right-color: #898179
+}
+navigation.nav2 .crust {
+    width: auto;
+}
+navigation.nav2 .crust a {
+    padding: 5px 12.5px !important
+}
+navigation.nav2 .crust i {
+    padding: 8px 2px 8px 0;
+    font-size: 18px;
+    margin-right: 0;
+}
+.gelismisArama {
+    margin: 15px auto 25px auto;
+    width: 400px;
+    background: #dedad8;
+    border: 1px solid #b9b6b5;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.gelismisArama h1 {
+    color: #9a6d52;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px 15px
+}
+.gelismisArama h1 .fa-arrow-down {
+    float: left;
+    position: relative;
+    top: 2px;
+    color: #898179;
+    transition: .5s;
+}
+.gelismisArama h1 .fa-arrow-down+.fa-arrow-down {
+    float: right;
+}
+.gelismisArama form {
+    padding: 10px;
+}
+.gelismisArama form label {
+    display: block;
+    margin-bottom: 10px
+}
+.gelismisArama form label:focus {
+    color: red !important
+}
+.gelismisArama form input[type="radio"] {
+    display: none;
+}
+.gelismisArama form input[type="text"],
+.gelismisArama form select {
+    padding: 8px 5px;
+    border-radius: 4px;
+    width: 72%;
+    border: 1px solid #b9b6b5;
+    background: #f1f1f1;
+    transition: .3s;
+    outline: none;
+    font: 13px "Exo 2";
+    color: #38322c;
+}
+.gelismisArama form input[type="text"]:focus,
+.gelismisArama form select:focus {
+    background: #FFF;
+}
+.gelismisArama form button {
+    background: #a7633b;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 2px #925735;
+    border: none;
+    width: 100%;
+    margin: 0 auto;
+    color: #e2dedc;
+    display: block;
+    font: 600 12px "Exo 2";
+    cursor: pointer;
+    transition: .2s;
+}
+.gelismisArama form button:hover {
+    background: #9a5933;
+}
+.gelismisArama form #Sure {
+    width: 13%
+}
+.gelismisArama form #Sure+#Sure {
+    width: 58.3%
+}
+.gelismisArama form h2 {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 12px;
+    width: 27%;
+    color: #7d776e;
+}
+.sayfalamaSutun {
+    position: absolute;
+    background: #dedad8;
+    cursor: default;
+    border-radius: 4px;
+    padding: 10px;
+    border: 1px solid #b9b6b5;
+    color: #38322c;
+    font-weight: 600;
+    margin-top: 15px
+}
+.sayfalamaSutun i {
+    margin-right: 5px
+}
+.sayfalamaSutun+.sayfalamaSutun {
+    right: 0
+}
+.acilsusamacil {
+    background: #e2dedc;
+}
+.acilsusamacil h1 {
+    color: #a2582c;
+}
+.acilsusamacil h1 .fa-arrow-down {
+    color: #38322c;
+    -ms-transform: rotate(-180deg);
+    /* IE 9 */
+    
+    -webkit-transform: rotate(-180deg);
+    /* Chrome, Safari, Opera */
+    
+    transform: rotate(-180deg);
+}
+.acilsusamacil h1 .fa-arrow-down+.fa-arrow-down {
+    -ms-transform: rotate(180deg);
+    /* IE 9 */
+    
+    -webkit-transform: rotate(180deg);
+    /* Chrome, Safari, Opera */
+    
+    transform: rotate(180deg);
+}
+.gelismisAramaBilgi {
+    background: #978f89;
+    color: #f1f1f1;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 4px;
+    width: 85%;
+    margin: 10px auto 0 auto;
+    text-align: center;
+    cursor: default;
+}
