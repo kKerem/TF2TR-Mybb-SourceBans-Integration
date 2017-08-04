@@ -4,7 +4,7 @@ $dbid   = "id";
 $dbpass = "pw";
 
 $db = mysql_connect($dbip, $dbid, $dbpass) or die(mysql_error());
-mysql_select_db("tfturkiy_sb", $db) or die(mysql_error());
+mysql_select_db("db", $db) or die(mysql_error());
 mysql_query("set character_set_client='utf8'");
 mysql_query("set character_set_results='utf8'");
 mysql_query("set collation_connection='utf8_general_ci'");
@@ -86,25 +86,29 @@ if (isset($_GET["s"])) {
 function sayfalama()
 {
     global $s, $sayfaSayisi;
+    $sayfalamaArray = array(
+        '/\?s=[0-9,]/',
+        '/\&s=[0-9,]/'
+    );
     echo '<div class="cezaSayfalama">';
     if ($s > 1) {
-        echo '<a class="linksayi solbas" href="' . $_SERVER['REQUEST_URI'] . '&s=1" original-title="En Başa Dön"><i class="fa fa-step-backward" aria-hidden="true"></i></a>';
+        echo '<a class="linksayi solbas" href="' . preg_replace($sayfalamaArray, '', $_SERVER['REQUEST_URI']) . '&s=1" original-title="En Başa Dön"><i class="fa fa-step-backward" aria-hidden="true"></i></a>';
     } else {
         echo '<span class="delink linksayi solbas"><i class="fa fa-step-backward" aria-hidden="true" style="opacity:0"></i></span>';
     }
     if ($s <= $sayfaSayisi) {
         if ($s > 3) {
-            echo '<a class="linksayi" href="' . $_SERVER['REQUEST_URI'] . '&s=' . ($s - 3) . '">' . ($s - 3) . '</a>';
+            echo '<a class="linksayi" href="' . preg_replace($sayfalamaArray, '', $_SERVER['REQUEST_URI']) . '&s=' . ($s - 3) . '">' . ($s - 3) . '</a>';
         } else {
-            echo '<span class="delink linksayi" href="' . $_SERVER['REQUEST_URI'] . '&s=' . ($s - 3) . '"> </span>';
+            echo '<span class="delink linksayi" href="' . preg_replace($sayfalamaArray, '', $_SERVER['REQUEST_URI']) . '&s=' . ($s - 3) . '"> </span>';
         }
         if ($s > 2) {
-            echo '<a class="linksayi" href="' . $_SERVER['REQUEST_URI'] . '&s=' . ($s - 2) . '">' . ($s - 2) . '</a>';
+            echo '<a class="linksayi" href="' . preg_replace($sayfalamaArray, '', $_SERVER['REQUEST_URI']) . '&s=' . ($s - 2) . '">' . ($s - 2) . '</a>';
         } else {
-            echo '<span class="delink linksayi" href="' . $_SERVER['REQUEST_URI'] . '&s=' . ($s - 2) . '"> </span>';
+            echo '<span class="delink linksayi" href="' . preg_replace($sayfalamaArray, '', $_SERVER['REQUEST_URI']) . '&s=' . ($s - 2) . '"> </span>';
         }
         if ($s > 1) {
-            echo '<a href="' . $_SERVER['REQUEST_URI'] . '&s=' . ($s - 1) . '" original-title="Önceki Sayfa"><i class="fa fa-angle-left" aria-hidden="true"></i></a>';
+            echo '<a href="' . preg_replace($sayfalamaArray, '', $_SERVER['REQUEST_URI']) . '&s=' . ($s - 1) . '" original-title="Önceki Sayfa"><i class="fa fa-angle-left" aria-hidden="true"></i></a>';
         } else {
             echo '<span class="delink" original-title="Önceki sayfa yok"><i class="fa fa-angle-left" aria-hidden="true"></i></span>';
         }
@@ -112,7 +116,7 @@ function sayfalama()
     echo '<select onchange="location = this.value;">';
     if ($sayfaSayisi > 1) {
         for ($i = 1; $i <= $sayfaSayisi; $i++) {
-            echo '<option value="' . $_SERVER['REQUEST_URI'] . '&s=' . $i . '"';
+            echo '<option value="' . preg_replace($sayfalamaArray, '', $_SERVER['REQUEST_URI']) . '&s=' . $i . '"';
             if ($s == $i) {
                 echo ' selected>' . $i;
             } else {
@@ -124,24 +128,24 @@ function sayfalama()
     echo '</select>';
     if ($s <= $sayfaSayisi) {
         if ($s < $sayfaSayisi) {
-            echo '<a href="' . $_SERVER['REQUEST_URI'] . '&s=' . ($s + 1) . '" original-title="Sonraki Sayfa"><i class="fa fa-angle-right" aria-hidden="true"></i></a>';
+            echo '<a href="' . preg_replace($sayfalamaArray, '', $_SERVER['REQUEST_URI']) . '&s=' . ($s + 1) . '" original-title="Sonraki Sayfa"><i class="fa fa-angle-right" aria-hidden="true"></i></a>';
         } else {
             echo '<span class="delink" original-title="Sonraki sayfa yok"><i class="fa fa-angle-right" aria-hidden="true"></i></span>';
         }
         if ($s < $sayfaSayisi - 1) {
-            echo '<a class="linksayi linksayisag" href="' . $_SERVER['REQUEST_URI'] . '&s=' . ($s + 2) . '">' . ($s + 2) . '</a>';
+            echo '<a class="linksayi linksayisag" href="' . preg_replace($sayfalamaArray, '', $_SERVER['REQUEST_URI']) . '&s=' . ($s + 2) . '">' . ($s + 2) . '</a>';
         } else {
-            echo '<span class="delink linksayi linksayisag" href="' . $_SERVER['REQUEST_URI'] . '&s=' . ($s + 2) . '"> </span>';
+            echo '<span class="delink linksayi linksayisag" href="' . preg_replace($sayfalamaArray, '', $_SERVER['REQUEST_URI']) . '&s=' . ($s + 2) . '"> </span>';
         }
         if ($s < $sayfaSayisi - 2) {
-            echo '<a class="linksayi linksayisag" href="' . $_SERVER['REQUEST_URI'] . '&s=' . ($s + 3) . '">' . ($s + 3) . '</a>';
+            echo '<a class="linksayi linksayisag" href="' . preg_replace($sayfalamaArray, '', $_SERVER['REQUEST_URI']) . '&s=' . ($s + 3) . '">' . ($s + 3) . '</a>';
         } else {
-            echo '<span class="delink linksayi linksayisag" href="' . $_SERVER['REQUEST_URI'] . '&s=' . ($s + 3) . '"> </span>';
+            echo '<span class="delink linksayi linksayisag" href="' . preg_replace($sayfalamaArray, '', $_SERVER['REQUEST_URI']) . '&s=' . ($s + 3) . '"> </span>';
         }
     }
     
     if ($s < $sayfaSayisi) {
-        echo '<a class="linksayi linksayisag solbas" href="' . $_SERVER['REQUEST_URI'] . '&s=' . $sayfaSayisi . '" original-title="En Sona Git"><i class="fa fa-step-forward" aria-hidden="true"></i></a>';
+        echo '<a class="linksayi linksayisag solbas" href="' . preg_replace($sayfalamaArray, '', $_SERVER['REQUEST_URI']) . '&s=' . $sayfaSayisi . '" original-title="En Sona Git"><i class="fa fa-step-forward" aria-hidden="true"></i></a>';
     } else {
         echo '<span class="delink linksayi linksayisag"> </span>';
     }
